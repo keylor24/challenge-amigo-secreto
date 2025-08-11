@@ -9,6 +9,18 @@ function agregarAmigo() {
     else{
         amigos.push(nuevoAmigo);
         limpiarCaja();
+        agregarAmigoLista(amigos);
+    }
+}
+
+function agregarAmigoLista(listaNombres) {
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = ''; // Limpiar la lista antes de agregar nuevos amigos
+    
+    for(let i = 0; i < listaNombres.length; i++) {
+        let li = document.createElement('li');
+        li.textContent = listaNombres[i];
+        lista.appendChild(li);
     }
 }
 
