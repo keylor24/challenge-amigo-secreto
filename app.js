@@ -1,5 +1,6 @@
 let amigos = [];
 let amigosMostrados = [];
+const MAX_AMIGOS = 100;
 
 function agregarAmigo() {
     let nuevoAmigo = document.getElementById('amigo').value;
@@ -9,10 +10,16 @@ function agregarAmigo() {
     }
     else{
         if(amigos.includes(nuevoAmigo)) {
-            alert("El nombre ya está en la lista.");
+            alert("El nombre ingresado ya está en la lista.");
             limpiarCaja();
             return;
         } 
+        
+        if(amigos.length >= MAX_AMIGOS) {
+            alert(`No puedes agregar más de ${MAX_AMIGOS} amigos.`);
+            limpiarCaja();
+            return;
+        }
 
         amigos.push(nuevoAmigo);
         agregarAmigoLista(amigos);
