@@ -11,6 +11,10 @@ function agregarAmigo() {
         amigos.push(nuevoAmigo);
         limpiarCaja();
         agregarAmigoLista(amigos);
+
+        if(amigos.length >= 2) {
+            document.getElementById('botonSortear').disabled = false; // Habilitar el botón de sorteo
+        }
     }
 }
 
