@@ -8,9 +8,15 @@ function agregarAmigo() {
         alert("Por favor, ingresa un nombre válido.");
     }
     else{
+        if(amigos.includes(nuevoAmigo)) {
+            alert("El nombre ya está en la lista.");
+            limpiarCaja();
+            return;
+        } 
+
         amigos.push(nuevoAmigo);
-        limpiarCaja();
         agregarAmigoLista(amigos);
+        limpiarCaja();
 
         if(amigos.length >= 2) {
             document.getElementById('botonSortear').disabled = false; // Habilitar el botón de sorteo
@@ -42,7 +48,6 @@ function sortearAmigo() {
         }
         else {
             amigosMostrados.push(amigoSorteado);
-            console.log(amigosMostrados);
         }
 
         let mostrarResultado = document.getElementById('resultado');
