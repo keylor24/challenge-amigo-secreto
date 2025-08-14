@@ -12,7 +12,6 @@ Los usuarios pueden:
 ---
 
 ![Pantalla principal](assets/captura-inicio.png)
-![Gif del sorteo](assets/sorteo.gif)
 
 ## 🛠️ Funcionalidades
 - **Agregar nombres:** Los usuarios escriben un nombre y lo agregan a la lista.  
@@ -23,6 +22,8 @@ Los usuarios pueden:
 - **Interfaz amigable:** Botones deshabilitados hasta que haya suficientes amigos para sortear.
 
 ---
+
+![Gif del sorteo](assets/sorteo.gif)
 
 ## 💻 Tecnologías utilizadas
 - HTML  
